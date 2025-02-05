@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contacts Address Book (Vanilla JS)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Container centers the application -->
+    <div class="container">
+      <h1>Contacts Address Book</h1>
+      <div class="contacts-container">
+        <!-- Left panel: List of contacts and "Add New Contact" button -->
+        <div class="contacts-list">
+          <h4>Contacts</h4>
+          <ul id="contactsList"></ul>
+          <button id="addNewContactBtn" class="button">
+            + Add New Contact
+          </button>
+        </div>
+
+        <!-- Right panel: Contact details form -->
+        <div class="contact-details">
+          <h4 id="formTitle">No Contact Selected</h4>
+          <form id="contactForm">
+            <label for="firstName">
+              First Name <span style="color: red">*</span>
+            </label>
+            <input
+              type="text"
+              id="firstName"
+              placeholder="First Name"
+              required
+            />
+
+            <label for="lastName">
+              Last Name <span style="color: red">*</span>
+            </label>
+            <input type="text" id="lastName" placeholder="Last Name" required />
+
+            <label>Emails</label>
+            <ul id="emailList" class="email-list"></ul>
+            <button type="button" id="addEmailBtn" class="button">
+              + Add Email
+            </button>
+
+            <div class="buttons">
+              <button
+                type="button"
+                id="deleteBtn"
+                class="button button-outline"
+                style="display: none"
+              >
+                Delete Contact
+              </button>
+              <button type="submit" id="saveBtn" class="button button-primary">
+                Save Contact
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link to your custom JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Body styles to center the application vertically and horizontally */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Container for the app with a max-width, padding, and subtle shadow */
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Center the main heading */
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Layout for the contacts container */
+.contacts-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Contacts list styles */
+.contacts-list {
+  flex: 1 1 200px;
+  border-right: 1px solid #ccc;
+  padding-right: 1rem;
+}
+
+.contacts-list h4 {
+  margin-top: 0;
+}
+
+.contacts-list ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.contacts-list li {
+  padding: 0.3rem 0;
+  cursor: pointer;
+}
+
+.contacts-list li:hover {
+  background: #f0f0f0;
+}
+
+/* Contact details form styles */
+.contact-details {
+  flex: 2 1 400px;
+}
+
+.contact-details form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.email-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.email-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.2rem;
+}
+
+.email-item:hover .delete-email {
+  visibility: visible;
+}
+
+.delete-email {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  visibility: hidden; /* Only visible on hover */
+}
+
+/* Button styles */
+.button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #ccc;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.button:hover {
+  background-color: #bbb;
+}
+
+.button-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.button-primary:hover {
+  background-color: #0069d9;
+}
+
+.button-outline {
+  background-color: transparent;
+  border: 2px solid #ccc;
+}
+
+.button-outline:hover {
+  border-color: #aaa;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .contacts-container {
+    flex-direction: column;
+  }
+
+  .contacts-list {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+}
